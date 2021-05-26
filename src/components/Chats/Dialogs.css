@@ -1,0 +1,75 @@
+.dialogs a{
+    display: block;
+    margin-top: 30px;
+    margin: 3px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    width:100%;
+}
+
+.dialogs a:hover{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.dialogs a.active{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.dialogHead{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.messages{
+    grid-area: m;
+    background-color: white;
+    color:black;
+    text-align:left;
+}
+
+.dialogName{
+    display : block;
+    width: 100%;
+    padding: 1.5px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+}
+
+.chats {
+    margin: 0 auto;
+    display: grid;
+     grid-template-areas:
+    "ds  m";
+    grid-template-columns: 50% 49%;
+
+}
+
+.dialogs{
+    grid-area: ds;
+}
+
+.sendMessage{
+    background-color: black;
+    color: white;
+}
+
+.sendMessage textarea{
+    margin-top: 3px;
+    width:80%;
+    border-radius:7px;
+}
+
+.sendMessage button{
+    width:18%;
+}
+
+.messages textarea {
+width: 99%;
+}

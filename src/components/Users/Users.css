@@ -1,0 +1,14 @@
+.users .selected {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.pages {
+    width: 100%;
+}
+
+.pages span{
+    display: inline-block;
+    margin: 3px;
+}

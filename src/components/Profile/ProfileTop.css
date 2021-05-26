@@ -1,0 +1,41 @@
+.profileTop .avatar{
+    grid-area: ava;
+    margin: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    border-radius: 100%;
+}
+
+.profileTop .aboutMe{
+    grid-area: am;
+    margin: 5px;
+    text-align:center;
+}
+
+.profileTop .status{
+    grid-area: st;
+    margin: 5px;
+    text-align:center;
+}
+
+.profileTop {
+    margin: 5px;
+    background-color: white;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+    display: grid;
+     grid-template-areas:
+    "ava"
+    "un"
+    "am"
+    "st";
+    grid-template-columns: 100% ;
+    grid-column-gap:5px;
+}
+
+.user .username{
+    grid-area: un;
+}

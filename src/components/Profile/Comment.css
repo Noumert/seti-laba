@@ -1,0 +1,31 @@
+.c-text{
+    grid-area: ct;
+    text-align: left;
+}
+
+.comment .avatar{
+    grid-area: ava;
+    margin: 5px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.comment {
+    margin: 5px;
+    background-color: white;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+    display: grid;
+     grid-template-areas:
+    "ava  ct"
+    "un   ct";
+    grid-template-columns: 60px 10fr;
+    grid-column-gap:5px;
+}
+
+.comment .username{
+
+    grid-area: un;
+}

@@ -1,0 +1,51 @@
+.user .avatar{
+    grid-area: ava;
+    margin: 5px;
+    width: 40px;
+    border-radius: 10px;
+}
+
+.user .city{
+    grid-area: city;
+    margin: 5px;
+    border-radius: 10px;
+    text-align:right;
+}
+
+.user .country{
+    grid-area: country;
+    margin: 5px;
+    border-radius: 10px;
+    text-align:right;
+}
+
+.user .status{
+    grid-area: st;
+    margin: 5px;
+    border-radius: 10px;
+    text-align:center;
+}
+
+.user {
+    margin: 5px;
+    background-color: white;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    width:80%;
+    display: grid;
+     grid-template-areas:
+    "ava  un city"
+    "dau  st country";
+    grid-template-columns: 60px 50% ;
+    grid-column-gap:5px;
+}
+
+.user .username{
+    grid-area: un;
+}
+
+.user .delAddUser{
+    grid-area: dau;
+    width: 60px;
+}

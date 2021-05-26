@@ -1,0 +1,27 @@
+.common-nav{
+    grid-area: nav;
+    height: 35px;
+    background-color: grey;
+}
+
+.common-nav .link:hover{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.common-nav a.link.active{
+    background-color: white;
+    color: black;
+    text-decoration: none;
+}
+
+.common-nav .link{
+    margin-top: 30px;
+    margin: 3px;
+    padding: 3px;
+    font-size: 21px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+}

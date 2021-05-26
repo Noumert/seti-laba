@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9d30db8dd472060fabe3f9ac455572a6",
+    "revision": "de51ea1f5ab4bf706d25e265f3f57928",
     "url": "/seti-laba/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/seti-laba/static/css/3.1c4ab4a9.chunk.css"
   },
   {
-    "revision": "7e0d5c6a3cbc87361e0d",
+    "revision": "357d509f495226739883",
     "url": "/seti-laba/static/css/main.2f3e35b1.chunk.css"
   },
   {
@@ -28,8 +28,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/seti-laba/static/js/4.0deeb413.chunk.js"
   },
   {
-    "revision": "7e0d5c6a3cbc87361e0d",
-    "url": "/seti-laba/static/js/main.f670e284.chunk.js"
+    "revision": "357d509f495226739883",
+    "url": "/seti-laba/static/js/main.09393023.chunk.js"
   },
   {
     "revision": "0900e93dd67953d9ea56",

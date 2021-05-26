@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/seti-laba/static/css/main.2f3e35b1.chunk.css",
-    "main.js": "/seti-laba/static/js/main.f670e284.chunk.js",
-    "main.js.map": "/seti-laba/static/js/main.f670e284.chunk.js.map",
+    "main.js": "/seti-laba/static/js/main.09393023.chunk.js",
+    "main.js.map": "/seti-laba/static/js/main.09393023.chunk.js.map",
     "runtime-main.js": "/seti-laba/static/js/runtime-main.eb7b2c71.js",
     "runtime-main.js.map": "/seti-laba/static/js/runtime-main.eb7b2c71.js.map",
     "static/js/2.19c28e94.chunk.js": "/seti-laba/static/js/2.19c28e94.chunk.js",
@@ -13,7 +13,7 @@
     "static/js/4.0deeb413.chunk.js": "/seti-laba/static/js/4.0deeb413.chunk.js",
     "static/js/4.0deeb413.chunk.js.map": "/seti-laba/static/js/4.0deeb413.chunk.js.map",
     "index.html": "/seti-laba/index.html",
-    "precache-manifest.552fb0aea4268f857bd05ffff262f756.js": "/seti-laba/precache-manifest.552fb0aea4268f857bd05ffff262f756.js",
+    "precache-manifest.36e736e4e5f2677584e51250e43ac297.js": "/seti-laba/precache-manifest.36e736e4e5f2677584e51250e43ac297.js",
     "service-worker.js": "/seti-laba/service-worker.js",
     "static/css/3.1c4ab4a9.chunk.css.map": "/seti-laba/static/css/3.1c4ab4a9.chunk.css.map",
     "static/css/main.2f3e35b1.chunk.css.map": "/seti-laba/static/css/main.2f3e35b1.chunk.css.map",
@@ -27,6 +27,6 @@
     "static/js/runtime-main.eb7b2c71.js",
     "static/js/2.19c28e94.chunk.js",
     "static/css/main.2f3e35b1.chunk.css",
-    "static/js/main.f670e284.chunk.js"
+    "static/js/main.09393023.chunk.js"
   ]
 }

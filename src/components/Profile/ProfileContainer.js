@@ -1,6 +1,6 @@
 import Profile from "./Profile.js";
 import {connect} from "react-redux";
-import {setProfile,addPost,addLike,toggleLoading,getProfileInfoFull,getUserStatusFull,updateStatusFull} from "./../../redux/profileReducer.js";
+import {setProfile,addPost,addLike,toggleLoading,getProfileInfoFull,getUserStatusFull,updateStatusFull,savePhotoFull} from "./../../redux/profileReducer.js";
 import Loading from "./../common/Loading/Loading.js";
 import * as axios from "axios";
 import React,{PureComponent} from 'react';
@@ -12,14 +12,22 @@ import {getProfileFromState,getIsLoadingFromStateProfile,getProfileDataFromState
 
 class ProfileAPI extends PureComponent{
 
+    refreshProfile(){
+            let userId = this.props.match.params.userId;
+            if(!userId){
+                userId = this.props.authorizedUserId;
+            }
+            this.props.getProfileInfoFull(userId);
+            this.props.getUserStatusFull(userId);
+    }
+
     componentDidMount(){
-        console.log(this.props)
-        let userId = this.props.match.params.userId;
-        if(!userId){
-            userId = this.props.authorizedUserId;
-        }
-        this.props.getProfileInfoFull(userId);
-        this.props.getUserStatusFull(userId);
+        this.refreshProfile();
+    }
+
+    componentDidUpdate(prevProps,prevState,snapshot){
+        if(this.props.match.params.userId != prevProps.match.params.userId)
+        this.refreshProfile()
     }
 
 //    shouldComponentUpdate(nextProps,nextState){
@@ -31,7 +39,7 @@ class ProfileAPI extends PureComponent{
         return (
             <div>
             <Loading isLoading = {this.props.isLoading} />
-            <Profile {...this.props} />
+            <Profile isOwner={!this.props.match.params.userId} {...this.props} />
             </div>
         )
     }
@@ -48,7 +56,7 @@ let mapStateToProps = (state) => (
     }
 )
 
-export default compose(connect (mapStateToProps,{addPost,addLike,toggleLoading,setProfile,getProfileInfoFull,getUserStatusFull,updateStatusFull}),
+export default compose(connect (mapStateToProps,{addPost,addLike,toggleLoading,setProfile,getProfileInfoFull,getUserStatusFull,updateStatusFull,savePhotoFull}),
                        withRouter,
                        withAuthRedirect
                        )(ProfileAPI)

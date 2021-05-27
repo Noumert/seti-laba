@@ -1,11 +1,12 @@
 import userPhoto from "./../assets/images/avatar.png";
-import {getProfileInfo,getStatus,updateStatus} from "./../api/api.js";
+import {getProfileInfo,getStatus,updateStatus,savePhoto,updateProfile} from "./../api/api.js";
 
 const ADD_LIKE = 'profile/ADD-LIKE';
 const ADD_POST = 'profile/ADD-POST';
 const TOGGLE_LOADING = 'profile/TOGGLE-LOADING';
 const SET_PROFILE = 'profile/SET-PROFILE';
 const SET_STATUS = 'profile/SET-STATUS';
+const SET_PHOTO = 'profile/SET-PHOTO'
 
 let initialState = {
     profileData : null,
@@ -47,9 +48,9 @@ const commentsReducer = (state = initialState,action) => {
         case SET_STATUS : {
             return {...state,status: action.status};
         }
-//        case UPDATE_STATUS : {
-//                    return {...state,status: action.data};
-//        }
+        case SET_PHOTO : {
+                    return {...state,profileData: {...state.profileData,photos: action.photos}};
+        }
         default: {
             return state;
         }
@@ -61,6 +62,7 @@ export const addLike = (id) => ({type:ADD_LIKE,postId:parseInt(id)});
 export const toggleLoading = (isLoading) => ({type:TOGGLE_LOADING,isLoading});
 export const setProfile = (profileData) => ({type:SET_PROFILE,profileData});
 export const setStatus = (status) => ({type:SET_STATUS,status});
+export const setPhoto = (photos) => ({type:SET_PHOTO,photos});
 
 
 export const getProfileInfoFull = (id) =>async (dispatch) => {
@@ -82,6 +84,17 @@ export const updateStatusFull = (text) => async (dispatch) => {
                     if(response.data.resultCode === 0){
                         dispatch(setStatus(text));
                     }
+}
+
+export const savePhotoFull = (file) => async (dispatch) => {
+    let response = await savePhoto(file)
+    if(response.data.resultCode === 0){
+        dispatch(setPhoto(response.data.data.photos));
+    }
+}
+
+export const updateProfileFull = (newData) => async (dispatch) => {
+    let response = await updateProfile(newData)
 }
 
 

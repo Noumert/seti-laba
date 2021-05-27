@@ -36,6 +36,8 @@ export const getProfileInfo = (id) => {
     })
 }
 
+
+
 export const getStatus = (id) => {
     return axios.get(baseUrl + `profile/status/${id}`,
         {
@@ -83,4 +85,29 @@ export const logOut = () => {
     {
     withCredentials:true
     })
+}
+
+export const savePhoto = (file) => {
+    const formData = new FormData();
+    formData.append("image",file)
+    return axios.put(baseUrl + `profile/photo`,
+            formData,
+            {
+                withCredentials:true,
+                headers:{
+                                  "API-KEY": API,
+                                  'Content-type' : 'multipart/form-data'
+                        }
+            })
+}
+
+export const updateProfile = (newData) => {
+    return axios.put(baseUrl + `profile`,
+            newData,
+            {
+                withCredentials:true,
+                headers:{
+                                  "API-KEY": API,
+                        }
+            })
 }

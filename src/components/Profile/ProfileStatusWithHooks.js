@@ -13,7 +13,9 @@ const ProfileStatusWithHooks = React.memo(param =>{
         }, [param.status])
 
          const activateEditMode = () => {
+            if(param.isOwner){
             setEditMode(true);
+            }
          }
 
          const deactivateEditMode = () => {
@@ -30,7 +32,7 @@ const ProfileStatusWithHooks = React.memo(param =>{
                 {!editMode ?
                 <div><span onDoubleClick={activateEditMode}>status: {status ? status : "no status"}</span></div>
                 :
-                <div>status: <input onChange={onStatusChange} autoFocus={true} onBlur={deactivateEditMode} value={status} /></div>
+                <div>status: <textarea onChange={onStatusChange} autoFocus={true} onBlur={deactivateEditMode} value={status}></textarea></div>
                 }
            </div>
         )

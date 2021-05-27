@@ -1,0 +1,6 @@
+.status textarea{
+    height:50px;
+    width:300px;
+    white-space: normal;
+    wrap:soft;
+}
